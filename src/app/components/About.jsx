@@ -1,49 +1,54 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-[#13131f]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="about" className="py-20 sm:py-28 bg-[#13131f] relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="text-center mb-16">
-          <p className="text-[#00e5ff] text-sm font-semibold tracking-widest uppercase mb-2">Get to know me</p>
-          <h2 className="text-4xl font-extrabold text-white">About Me</h2>
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-[#00e5ff] text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2">
+            Get to know me
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">About Me</h2>
           <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-[#00e5ff]" />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-14">
-          {/* Card */}
-          <div className="flex-1 bg-[#1a1a2e] rounded-2xl p-8 border border-[#00e5ff]/10 shadow-xl">
-            <h3 className="text-2xl font-bold text-[#00e5ff] mb-4">Who Am I?</h3>
-            <p className="text-gray-300 leading-relaxed mb-5">
-              Hi! I&apos;m <span className="text-white font-semibold">Raunak Biswas</span>, a passionate
-              Web Developer who loves building full-stack web applications with clean, efficient, and
-              scalable code. I enjoy turning complex problems into simple, beautiful, and intuitive
-              digital experiences.
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
+          {/* Bio Card */}
+          <div className="flex-1 bg-[#1a1a2e] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#00e5ff]/15 shadow-xl w-full">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <span className="w-3 h-3 rounded-full bg-[#00e5ff]" />
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Who Am I?</h3>
+            </div>
+
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
+              Hi! I&apos;m <span className="text-white font-semibold">Raunak Biswas</span>, a dedicated
+              Web Developer currently pursuing my Computer Science and Engineering degree at{' '}
+              <span className="text-[#00e5ff] font-medium">American International University-Bangladesh (AIUB)</span>.
             </p>
-            <p className="text-gray-300 leading-relaxed mb-5">
-              I&apos;m constantly learning and exploring new technologies to stay at the cutting edge
-              of web development. When I&apos;m not coding, I like to explore new ideas, contribute to
-              open-source, and improve my problem-solving skills.
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
+              I specialize in developing modern web applications utilizing React, Next.js, Node.js, Express,
+              and MongoDB. I love solving algorithmic challenges, creating aesthetic user interfaces, and
+              implementing scalable backend systems.
             </p>
-            <p className="text-gray-300 leading-relaxed">
-              I believe in writing maintainable code and building products that make a real
-              difference. Let&apos;s build something amazing together!
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              I am driven by continuous learning and writing clean, maintainable, and well-documented code.
+              Always excited to collaborate on innovative projects and contribute to meaningful technology.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="flex-shrink-0 grid grid-cols-2 gap-6">
+          {/* Stats Cards (NO percentages!) */}
+          <div className="w-full lg:w-auto flex-shrink-0 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-4 sm:gap-6">
             {[
-              { value: '1+', label: 'Years Learning' },
-              { value: '5+', label: 'Projects Built' },
-              { value: '10+', label: 'Technologies' },
-              { value: '100%', label: 'Passion' },
+              { value: '2023', label: 'Started at AIUB' },
+              { value: 'MERN', label: 'Full-Stack Focus' },
+              { value: '15+', label: 'Tech & Tools' },
+              { value: 'Clean', label: 'Code Quality' },
             ].map(({ value, label }) => (
               <div
                 key={label}
-                className="bg-[#1a1a2e] border border-[#00e5ff]/20 rounded-2xl p-6 text-center shadow-lg hover:border-[#00e5ff]/50 transition-colors"
+                className="bg-[#1a1a2e] border border-[#00e5ff]/20 rounded-2xl p-5 sm:p-6 text-center shadow-lg hover:border-[#00e5ff]/50 transition-all hover:-translate-y-1"
               >
-                <p className="text-3xl font-extrabold text-[#00e5ff]">{value}</p>
-                <p className="text-gray-400 text-sm mt-1">{label}</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-[#00e5ff] tracking-tight">{value}</p>
+                <p className="text-gray-400 text-xs sm:text-sm mt-1 font-medium">{label}</p>
               </div>
             ))}
           </div>

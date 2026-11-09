@@ -47,8 +47,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Opens the visitor's email client with a pre-filled email to you
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`)
+    const subject = encodeURIComponent(`Portfolio Message from ${form.name}`)
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
     )
@@ -60,42 +59,43 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-[#13131f]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-20 sm:py-28 bg-[#13131f] relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="text-center mb-16">
-          <p className="text-[#00e5ff] text-sm font-semibold tracking-widest uppercase mb-2">Get in touch</p>
-          <h2 className="text-4xl font-extrabold text-white">Contact Me</h2>
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-[#00e5ff] text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2">
+            Get in touch
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">Contact Me</h2>
           <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-[#00e5ff]" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Info Side */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Let&apos;s Talk!</h3>
-            <p className="text-gray-400 leading-relaxed mb-8">
-              I&apos;m currently open to new opportunities and collaborations. Whether you have a
-              project idea, a question, or just want to say hi — my inbox is always open.
-              I&apos;ll get back to you as soon as possible!
+          <div className="lg:col-span-5">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">Let&apos;s Connect</h3>
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+              Whether you have a job opportunity, a project proposal, or just want to discuss web technologies,
+              feel free to reach out. I will respond to your inquiry as soon as possible!
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {contactInfo.map(({ label, value, href, icon }) => (
                 <a
                   key={label}
                   href={href}
                   target={label !== 'Email' ? '_blank' : undefined}
                   rel={label !== 'Email' ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-[#1a1a2e] border border-[#00e5ff]/10 hover:border-[#00e5ff]/40 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-xl sm:rounded-2xl bg-[#1a1a2e] border border-[#00e5ff]/15 hover:border-[#00e5ff]/40 transition-all group shadow-md"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#00e5ff]/10 text-[#00e5ff] group-hover:bg-[#00e5ff] group-hover:text-[#0f0f1a] transition-all flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-[#00e5ff]/10 text-[#00e5ff] group-hover:bg-[#00e5ff] group-hover:text-[#0f0f1a] transition-all flex-shrink-0">
                     {icon}
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider">{label}</p>
-                    <p className="text-gray-200 font-medium text-sm">{value}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[11px] text-gray-500 uppercase tracking-wider font-semibold">{label}</p>
+                    <p className="text-gray-200 font-medium text-xs sm:text-sm truncate">{value}</p>
                   </div>
-                  <svg className="w-4 h-4 text-gray-600 group-hover:text-[#00e5ff] ml-auto transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-gray-600 group-hover:text-[#00e5ff] transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
@@ -104,25 +104,24 @@ export default function Contact() {
           </div>
 
           {/* Form Side */}
-          <div className="bg-[#1a1a2e] rounded-2xl p-8 border border-[#00e5ff]/10 shadow-xl">
+          <div className="lg:col-span-7 bg-[#1a1a2e] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#00e5ff]/15 shadow-2xl">
             {submitted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center gap-4 py-10">
-                <div className="w-16 h-16 rounded-full bg-[#00e5ff]/10 flex items-center justify-center">
+              <div className="py-12 flex flex-col items-center justify-center text-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-[#00e5ff]/10 border border-[#00e5ff]/30 flex items-center justify-center">
                   <svg className="w-8 h-8 text-[#00e5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h4 className="text-white font-bold text-xl">Email Client Opened!</h4>
-                <p className="text-gray-400 text-sm">
-                  Your default email app opened with the message pre-filled.
-                  Just hit <span className="text-[#00e5ff] font-semibold">Send</span> and I&apos;ll receive it at{' '}
+                <h4 className="text-white font-bold text-xl sm:text-2xl">Email Client Opened!</h4>
+                <p className="text-gray-300 text-sm max-w-md">
+                  Your mail app was launched with your message ready to send to{' '}
                   <span className="text-[#00e5ff] font-semibold">{MY_EMAIL}</span>.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-gray-400 font-medium mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm text-gray-300 font-semibold mb-1.5">
                     Your Name
                   </label>
                   <input
@@ -132,13 +131,14 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
-                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#00e5ff] transition-colors"
+                    placeholder="e.g. John Doe"
+                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#00e5ff] transition-colors"
                   />
                 </div>
+
                 <div>
-                  <label htmlFor="email" className="block text-sm text-gray-400 font-medium mb-2">
-                    Your Email
+                  <label htmlFor="email" className="block text-xs sm:text-sm text-gray-300 font-semibold mb-1.5">
+                    Your Email Address
                   </label>
                   <input
                     type="email"
@@ -147,13 +147,14 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
-                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#00e5ff] transition-colors"
+                    placeholder="e.g. john@example.com"
+                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#00e5ff] transition-colors"
                   />
                 </div>
+
                 <div>
-                  <label htmlFor="message" className="block text-sm text-gray-400 font-medium mb-2">
-                    Message
+                  <label htmlFor="message" className="block text-xs sm:text-sm text-gray-300 font-semibold mb-1.5">
+                    Your Message
                   </label>
                   <textarea
                     id="message"
@@ -162,21 +163,22 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    placeholder="Tell me about your project or just say hello..."
-                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#00e5ff] transition-colors resize-none"
+                    placeholder="Write your message here..."
+                    className="w-full bg-[#0f0f1a] border border-[#00e5ff]/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm sm:text-base focus:outline-none focus:border-[#00e5ff] transition-colors resize-none"
                   />
                 </div>
+
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-[#00e5ff] text-[#0f0f1a] font-bold text-sm hover:bg-white transition-all duration-300 shadow-lg shadow-[#00e5ff]/20 flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-[#00e5ff] text-[#0f0f1a] font-bold text-sm sm:text-base hover:bg-white transition-all duration-300 shadow-lg shadow-[#00e5ff]/25 flex items-center justify-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                   </svg>
                   Send Message
                 </button>
-                <p className="text-center text-xs text-gray-600">
-                  Clicking Send will open your email client with the message pre-filled.
+                <p className="text-center text-[11px] text-gray-500">
+                  Submitting directly prepares an email addressed to {MY_EMAIL}.
                 </p>
               </form>
             )}

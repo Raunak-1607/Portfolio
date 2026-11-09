@@ -43,6 +43,8 @@
         "Next.js",
         "React",
         "Tailwind CSS",
+        "HeroUI",
+        "daisyUI",
         "Node.js",
         "Express.js",
         "MongoDB",
@@ -60,38 +62,51 @@
       "JavaScript",
       "TypeScript",
       "Python",
-      "C++",
       "Java",
-      "HTML5",
-      "CSS3"
+      "C",
+      "C++"
     ],
-    "frontend": [
+    "frameworks": [
+      "React.js",
       "Next.js",
-      "React",
+      "Express.js",
+      "Node.js",
       "Tailwind CSS",
       "HeroUI",
-      "daisyUI",
-      "shadcn/ui"
-    ],
-    "backend": [
-      "Node.js",
-      "Express.js"
+      "daisyUI"
     ],
     "database": [
       "MongoDB",
       "MySQL",
-      "Oracle"
-    ],
-    "deployment": [
-      "Vercel",
-      "Netlify"
+      "Oracle",
+      "PostgreSQL",
+      "Redis"
     ],
     "tools": [
       "Git",
       "GitHub",
       "VS Code",
       "Figma",
-      "Notion"
+      "Notion",
+      "Postman",
+      "npm"
+    ],
+    "ai_tools": [
+      "Claude code",
+      "github Copilot",
+      "CodeX",
+      "Gemini"
+    ],
+    "deployment": [
+      "Vercel",
+      "Netlify",
+      "Firebase"
+    ],
+    "soft_skills": [
+      "Leadership",
+      "Networking",
+      "Team work",
+      "Problem Solving"
     ]
   }
 }

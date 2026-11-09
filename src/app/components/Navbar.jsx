@@ -97,9 +97,8 @@ export default function Navbar() {
         {/* Resume Button (Desktop) */}
         <div className="hidden md:flex items-center">
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/Raunak_Biswas_Resume.docx"
+            download="Raunak_Biswas_Resume.docx"
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#00e5ff] text-[#00e5ff] text-sm font-semibold hover:bg-[#00e5ff] hover:text-[#0f0f1a] transition-all duration-300 shadow-sm shadow-[#00e5ff]/20 hover:shadow-md hover:shadow-[#00e5ff]/40"
           >
             <svg
@@ -166,9 +165,8 @@ export default function Navbar() {
           })}
           <div className="pt-2">
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Raunak_Biswas_Resume.docx"
+              download="Raunak_Biswas_Resume.docx"
               className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full border border-[#00e5ff] text-[#00e5ff] text-sm font-semibold hover:bg-[#00e5ff] hover:text-[#0f0f1a] transition-all"
             >
               <svg

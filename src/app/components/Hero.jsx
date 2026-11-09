@@ -132,14 +132,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Profile Image with subtle ring effect */}
-          <div className="flex-shrink-0 relative my-4 sm:my-0">
-            <div className="relative w-44 h-44 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80">
-              {/* Outer decorative glowing ring */}
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-[#00e5ff]/30 to-transparent blur-md" />
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#00e5ff]/40 animate-spin" style={{ animationDuration: '30s' }} />
+          {/* Profile Image with subtle floating animation & breathing aura */}
+          <div className="flex-shrink-0 relative my-4 sm:my-0 profile-float">
+            <div className="relative w-44 h-44 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 group">
+              {/* Soft ambient breathing glow aura behind image */}
+              <div className="absolute -inset-3 rounded-full bg-gradient-to-tr from-[#00e5ff]/35 via-[#00bcd4]/20 to-transparent blur-xl profile-aura pointer-events-none" />
 
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#00e5ff]/70 shadow-2xl shadow-[#00e5ff]/30 relative z-10 bg-[#1a1a2e]">
+              {/* Elegant dual-ring border */}
+              <div className="w-full h-full rounded-full overflow-hidden border-2 border-[#00e5ff]/70 shadow-[0_0_35px_rgba(0,229,255,0.25)] ring-4 ring-[#00e5ff]/20 ring-offset-4 ring-offset-[#0f0f1a] relative z-10 bg-[#1a1a2e] transition-transform duration-500 group-hover:scale-[1.02]">
                 <Image
                   src="/me.jpeg"
                   alt="Raunak Biswas"

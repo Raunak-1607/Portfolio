@@ -1,126 +1,97 @@
-
-
 {
-  "project": {
-    "name": "BookNook",
-    
-    "tagline": "Your small online library",
-    "description": "A small online library where users can add books, browse the collection, borrow books, and return them.",
-    "live_url": "https://book-nook-green-three.vercel.app/",
-    "project_type": "Full-stack web application",
-    "status": "Deployed"
-  },
+  "projects": [
+    {
+      "id": "book-nook",
+      "name": "BookNook",
+      "tagline": "Your small online library",
+      "description": "A full-stack library platform where users can browse collections, borrow and return books, track available copies, and manage personal book additions.",
+      "live_url": "https://book-nook-green-three.vercel.app/",
+      "github_url": "https://github.com/Raunak-1607",
+      "display_url": "book-nook-green-three.vercel.app",
+      "image": "/image1.png",
+      "project_type": "Full-stack web application",
+      "status": "Live",
+      "tech_stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Better Auth",
+        "JWT"
+      ],
+      "highlights": [
+        "Interactive book catalog with instant details",
+        "Real-time copy count update on borrow & return",
+        "Secure user authentication with JWT verification"
+      ]
+    },
+    {
+      "id": "bazar-dor",
+      "name": "Bazar-Dor (বাজার দর)",
+      "tagline": "Daily commodity & market price tracker",
+      "description": "A real-time market price monitoring web application providing daily grocery prices, price fluctuation trends, and market-wise comparison across daily essentials.",
+      "live_url": "https://bazar-dor-alpha.vercel.app/",
+      "github_url": "https://github.com/Raunak-1607/Bazar-Dor.git",
+      "display_url": "bazar-dor-alpha.vercel.app",
+      "image": "/bazardor.png",
+      "project_type": "Full-stack web application",
+      "status": "Live",
+      "tech_stack": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Vercel"
+      ],
+      "highlights": [
+        "Categorized tracker across rice, lentils, oil, fish, meat & spices",
+        "Live price movement ticker tracking daily increases & decreases",
+        "Detailed commodity view with market averages and min/max ranges"
+      ]
+    }
+  ],
   "technology_stack": {
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "C++",
+      "Java",
+      "HTML5",
+      "CSS3"
+    ],
     "frontend": [
       "Next.js",
       "React",
-      "TypeScript",
       "Tailwind CSS",
-      "shadcn/ui",
-      "Lucide React"
+      "HeroUI",
+      "daisyUI",
+      "shadcn/ui"
     ],
     "backend": [
       "Node.js",
       "Express.js"
     ],
     "database": [
-      "MongoDB"
-    ],
-    "authentication_and_security": [
-      "Better Auth",
-      "JOSE (JWT verification)"
+      "MongoDB",
+      "MySQL",
+      "Oracle"
     ],
     "deployment": [
-      "Vercel"
+      "Vercel",
+      "Netlify"
     ],
-    "other_libraries": [
-      "React Toastify"
+    "tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Figma",
+      "Notion"
     ]
-  },
-  "main_features": [
-    "Browse all available books",
-    "View individual book details",
-    "Add new books",
-    "Edit book information",
-    "Delete books",
-    "Borrow books",
-    "Prevent a user from borrowing the same book more than once at a time",
-    "Track available copies",
-    "Return borrowed books",
-    "View books added by the logged-in user",
-    "View currently borrowed books",
-    "User authentication"
-  ],
-  "backend_api_routes": {
-    "public": [
-      {
-        "method": "GET",
-        "path": "/books",
-        "purpose": "Retrieve all books"
-      },
-      {
-        "method": "GET",
-        "path": "/books/detail/:id",
-        "purpose": "Retrieve one book by its ID"
-      }
-    ],
-    "authenticated": [
-      {
-        "method": "GET",
-        "path": "/books/:email",
-        "purpose": "Retrieve books added by a user"
-      },
-      {
-        "method": "POST",
-        "path": "/books",
-        "purpose": "Add a book"
-      },
-      {
-        "method": "PATCH",
-        "path": "/books/:id",
-        "purpose": "Update a book"
-      },
-      {
-        "method": "DELETE",
-        "path": "/books/:id",
-        "purpose": "Delete a book"
-      },
-      {
-        "method": "POST",
-        "path": "/borrowed-books",
-        "purpose": "Borrow a book"
-      },
-      {
-        "method": "GET",
-        "path": "/borrowed-books/:email",
-        "purpose": "Retrieve a user's active borrowed books"
-      },
-      {
-        "method": "PATCH",
-        "path": "/borrowed-books/:id/return",
-        "purpose": "Return a borrowed book"
-      }
-    ]
-  },
-  "database": {
-    "name": "BookNook",
-    "collections": [
-      "books",
-      "borrowbooks"
-    ],
-    "book_copy_tracking": "Available copies decrease when a book is borrowed and increase when it is returned."
-  },
-  "deployment": {
-    "frontend_platform": "Vercel",
-    "frontend_url": "https://book-nook-green-three.vercel.app/",
-    "backend_platform": "Vercel",
-    "backend_url": null,
-    "note": "The backend deployment URL was not included in the project details provided for this JSON file."
-  },
-  "project_notes": [
-    "The frontend uses Next.js with TypeScript.",
-    "The backend is built with Express.js and connects to MongoDB.",
-    "Authenticated API routes verify JWTs using JOSE and the authentication JWKS endpoint.",
-    "Set deployment environment variables such as MONGO_URL and CLIENT_URL in the backend hosting settings."
-  ]
+  }
 }

@@ -44,3 +44,34 @@ body {
   background: #00e5ff30;
   color: #00e5ff;
 }
+
+/* Elegant Profile Float & Aura Glow */
+@keyframes profileFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes profileAura {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.03);
+  }
+}
+
+.profile-float {
+  animation: profileFloat 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.profile-aura {
+  animation: profileAura 4.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}

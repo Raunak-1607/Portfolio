@@ -57,6 +57,37 @@
         "Live price movement ticker tracking daily increases & decreases",
         "Detailed commodity view with market averages and min/max ranges"
       ]
+    },
+    {
+      "id": "mentor-lagbe",
+      "name": "MentorLagbe",
+      "tagline": "Tuition & Mentorship Management Platform",
+      "description": "A comprehensive tuition and mentorship platform connecting students with verified tutors across Bangladesh, featuring tuition posting, application workflows, role-based dashboards, and secure payments.",
+      "live_url": "https://mentor-lagbe-client-phi.vercel.app/",
+      "github_url": "https://github.com/Raunak-1607/MentorLagbe_Client.git",
+      "client_github": "https://github.com/Raunak-1607/MentorLagbe_Client.git",
+      "server_github": "https://github.com/Raunak-1607/MentorLagbe_Server.git",
+      "display_url": "mentor-lagbe-client-phi.vercel.app",
+      "image": "/mentorlagbe.jpg",
+      "project_type": "Full-stack web application",
+      "status": "Live",
+      "tech_stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "HeroUI",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Better Auth",
+        "Stripe"
+      ],
+      "highlights": [
+        "Multi-tier role management for Students, Tutors & Admins",
+        "Structured tuition application & moderation workflows",
+        "Secure Stripe payment processing for mentorship batches"
+      ]
     }
   ],
   "technology_stack": {

@@ -294,19 +294,22 @@ def create_resume():
     r_t1_val.font.size = Pt(10.5)
     r_t1_val.font.italic = False
 
-    # Project 2: Bazar-Dor
+    # Project 2: MentorLagbe
     p_p2_title = doc.add_paragraph()
     set_spacing(p_p2_title, before=2.0, after=1.0, line=1.05)
-    r_p2_num = p_p2_title.add_run("2. Bazar-Dor – Real-Time Commodity Price Tracker: ")
+    r_p2_num = p_p2_title.add_run("2. MentorLagbe – Tuition & Mentorship Management Platform: ")
     r_p2_num.font.name = 'Calibri'
     r_p2_num.font.size = Pt(11)
     r_p2_num.font.bold = True
     r_p2_num.font.italic = False
     
-    add_hyperlink(p_p2_title, "Live Link", "https://bazar-dor-alpha.vercel.app/", color="0055AA", underline=False, font_size=10.5)
+    add_hyperlink(p_p2_title, "Live Link", "https://mentor-lagbe-client-phi.vercel.app/", color="0055AA", underline=False, font_size=10.5)
     r_sep2 = p_p2_title.add_run(" | ")
     r_sep2.font.size = Pt(10.5)
-    add_hyperlink(p_p2_title, "GitHub", "https://github.com/Raunak-1607/Bazar-Dor.git", color="0055AA", underline=False, font_size=10.5)
+    add_hyperlink(p_p2_title, "Client GitHub", "https://github.com/Raunak-1607/MentorLagbe_Client.git", color="0055AA", underline=False, font_size=10.5)
+    r_sep2_b = p_p2_title.add_run(" | ")
+    r_sep2_b.font.size = Pt(10.5)
+    add_hyperlink(p_p2_title, "Server GitHub", "https://github.com/Raunak-1607/MentorLagbe_Server.git", color="0055AA", underline=False, font_size=10.5)
 
     p_p2_role = doc.add_paragraph()
     set_spacing(p_p2_role, before=0, after=0.8, line=1.05)
@@ -322,9 +325,9 @@ def create_resume():
     r_role2_val.font.italic = False
 
     b2_items = [
-        "Built a responsive commodity price monitoring web app tracking 50+ daily market essentials across city retail and wholesale markets.",
-        "Engineered an automated price fluctuation ticker calculating daily percentage surges and price drops with sub-second UI updates.",
-        "Structured categorized aggregation queries across 8+ grocery categories, optimizing data retrieval speeds by 25%."
+        "Architected a full-stack tuition & mentorship platform connecting students and tutors with role-based access control (Student/Tutor/Admin).",
+        "Integrated Stripe subscription & payment gateway for premium mentorship batches and tutor monetization.",
+        "Implemented secure authentication via Better Auth and JOSE JWT verification, safeguarding 15+ backend REST APIs."
     ]
     for b in b2_items:
         p_b = doc.add_paragraph(style='List Bullet')
@@ -343,7 +346,7 @@ def create_resume():
     r_t2_lbl.font.size = Pt(10.5)
     r_t2_lbl.font.bold = True
     r_t2_lbl.font.italic = False
-    r_t2_val = p_p2_tech.add_run("Next.js, React, Tailwind CSS, HeroUI, daisyUI, Node.js, Express.js, MongoDB, Vercel")
+    r_t2_val = p_p2_tech.add_run("Next.js, React, TypeScript, Tailwind CSS, HeroUI, Node.js, Express.js, MongoDB, Better Auth, Stripe")
     r_t2_val.font.name = 'Calibri'
     r_t2_val.font.size = Pt(10.5)
     r_t2_val.font.italic = False
@@ -384,6 +387,26 @@ def create_resume():
     r_ed2_deg.font.size = Pt(10.5)
     r_ed2_deg.font.italic = False
     r_ed2_deg.font.color.rgb = RGBColor(35, 35, 35)
+
+    # ------------------ EXTRA-CURRICULAR & CERTIFICATIONS ------------------
+    add_section_heading("EXTRA-CURRICULAR & CERTIFICATIONS")
+    p_ex1 = doc.add_paragraph()
+    set_spacing(p_ex1, before=1, after=0.5, line=1.05)
+    r_ex1_inst = p_ex1.add_run("Cisco Networking Academy – IT Essentials: PC Hardware and Software: ")
+    r_ex1_inst.font.name = 'Calibri'
+    r_ex1_inst.font.size = Pt(11)
+    r_ex1_inst.font.bold = True
+    r_ex1_inst.font.italic = False
+    
+    add_hyperlink(p_ex1, "View Certificate", "https://my-portfolio-eta-vert-89.vercel.app/cisco-certificate.pdf", color="0055AA", underline=False, font_size=10.5)
+
+    p_ex1_sub = doc.add_paragraph()
+    set_spacing(p_ex1_sub, before=0, after=1.8, line=1.05)
+    r_ex1_deg = p_ex1_sub.add_run("Credential ID: c03ba8d9-c48e-4b13-8773-e6e887528fa7 | Completed: Jan 2024")
+    r_ex1_deg.font.name = 'Calibri'
+    r_ex1_deg.font.size = Pt(10.5)
+    r_ex1_deg.font.italic = False
+    r_ex1_deg.font.color.rgb = RGBColor(35, 35, 35)
 
     # ------------------ LANGUAGES ------------------
     add_section_heading("LANGUAGES")
